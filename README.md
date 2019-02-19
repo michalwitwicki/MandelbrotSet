@@ -2,6 +2,7 @@
 
 links:
 http://mathworld.wolfram.com/MandelbrotSet.html
+
 https://www.math.univ-toulouse.fr/~cheritat/wiki-draw/index.php/Mandelbrot_set#Escape_time_based_coloring
 http://linas.org/art-gallery/escape/escape.html
 http://www.easyrgb.com/en/math.php#text18
