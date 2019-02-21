@@ -1,8 +1,10 @@
 #pragma once
 
 #include <iostream>
-#include <math.h>
+#include <cmath>
 #include <SFML/Graphics.hpp>
+
+
 using namespace std;
 
 class MandelBrot
@@ -22,6 +24,4 @@ private:
 
     int mainEquation();
     sf::Color generateColor(unsigned int iterations, double prev_real, double prev_imaginary);
-
-    //metoda zoom ktora bedzie zmieniac wartosci range'ow
 };
