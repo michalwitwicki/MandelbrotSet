@@ -8,4 +8,5 @@ links:
 * https://math.stackexchange.com/questions/16970/a-way-to-determine-the-ideal-number-of-maximum-iterations-for-an-arbitrary-zoom
 * https://stackoverflow.com/questions/31871652/calculate-a-dynamic-iteration-value-when-zooming-into-a-mandelbrot
 * http://mrob.com/pub/muency/automaticdwelllimit.html
+* http://www.stefanbion.de/fraktal-generator/colormapping/
 
