@@ -2,15 +2,14 @@
 #include "color_conversion.h"
 #include "stopwatch.h"
 
-/*#define X_COORD -0.789473
-#define Y_COORD -0.158829
-#define INIT_OUT_HEIGHT 0.000001
-#define MAX_ITER 75 */
-
+/*#define X_COORD -0.79983
+#define Y_COORD -0.17823
+#define INIT_OUT_HEIGHT 0.01719
+#define MAX_ITER 100*/
 #define X_COORD -0.25
 #define Y_COORD 0
-#define INIT_OUT_HEIGHT 3 
-#define MAX_ITER  18
+#define INIT_OUT_HEIGHT 3
+#define MAX_ITER 20
 
 #define ZOOM_JUMP 15 //in percentage
 
@@ -39,6 +38,7 @@ int MandelBrot::mainEquation()
 
 void MandelBrot::go()
 {
+   //computeMaxIter();
     Stopwatch clock;
     clock.tick();
     //recursive formula for mandelbrot set, c belongs to Imaginary set
@@ -60,15 +60,8 @@ void MandelBrot::go()
     double slope_a = (out_hor_range.second-out_hor_range.first) / (window_size.first);
     double slope_b = (out_ver_range.second-out_ver_range.first) / (window_size.second);
 
-    //unsigned int max_iterations = 100;
     unsigned int counter = 0;
 
-    //sf::Color color1 = sf::Color::Black;
-    //sf::Color color2 = sf::Color::White;
-
-                double vmin = 100000;
-                double vmax = 0;
-                double smooth;
     for(int i=0; i<window_size.second; ++i)
     {
         for(int j=0; j<window_size.first; ++j)
@@ -81,7 +74,6 @@ void MandelBrot::go()
             prev_imaginary = coord_imaginary;
 
             counter = 0;
-            //for(counter=0; counter<max_iter; counter++)
             while(counter < max_iter)
             {
                 next_real = prev_real*prev_real - prev_imaginary*prev_imaginary; 
@@ -92,56 +84,26 @@ void MandelBrot::go()
 
                 if(prev_real*prev_real + prev_imaginary*prev_imaginary >= 32) //by definitions it should be 4
                 {
-                    /*cout<<"counter = "<<counter<<endl;
-                    cout<<"prev real = "<<prev_real<<endl;
-                    cout<<"prev imaginary = "<<prev_imaginary<<endl;*/
                     break;
                 }
                 counter++;
             }
-                /*next_real = prev_real*prev_real - prev_imaginary*prev_imaginary; 
-                next_imaginary = 2*prev_real*prev_imaginary;
-
-                prev_real = next_real + coord_real;
-                prev_imaginary = next_imaginary + coord_imaginary;
-
-                next_real = prev_real*prev_real - prev_imaginary*prev_imaginary; 
-                next_imaginary = 2*prev_real*prev_imaginary;
-
-                prev_real = next_real + coord_real;
-                prev_imaginary = next_imaginary + coord_imaginary;*/
 
             points_arr[i*window_size.first + j].position = sf::Vector2f(j, i);
             points_arr[i*window_size.first + j].color = generateColor(counter, prev_real, prev_imaginary);
-            if(counter != max_iter)
-            {
-
-                smooth = double(counter) + 1.0 - log(log(sqrt(prev_real*prev_real + prev_imaginary*prev_imaginary))) / log(2);
-                //smooth = double(counter) - log2(log2(sqrt(prev_real*prev_real + prev_imaginary*prev_imaginary)))+4.0;
-                smooth /= (max_iter);
-                if(smooth < vmin) vmin = smooth;
-                if(smooth > vmax) vmax = smooth;
-                //points_arr[i*window_size.first + j].color = color1;
-            }
-            /*
-            else
-            {
-                points_arr[i*window_size.first + j].color = color2;
-            }*/
-
         }
     }
 
-    //cout<<endl;
+    cout<<endl;
     //cout<<"vmax = "<<vmax<<endl;
     //cout<<"vmin = "<<vmin<<endl;
     clock.tick();
-    cout<<endl;
-    //cout<<"time = "<<clock.time()<<endl;
-    //cout<<"x = "<<(out_hor_range.first + out_hor_range.second)/2<<endl;
-    //cout<<"y = "<<(out_ver_range.first + out_ver_range.second)/2<<endl;
     cout.precision(40);
+    cout<<"time = "<<clock.time()<<endl;
+    cout<<"x = "<<fixed<<(out_hor_range.first + out_hor_range.second)/2<<endl;
+    cout<<"y = "<<fixed<<(out_ver_range.first + out_ver_range.second)/2<<endl;
     cout<<"ver out = "<<fixed<<out_ver_range.second - out_ver_range.first<<endl; 
+    cout<<"max_iter = "<<max_iter<<endl;
 }
 
 void MandelBrot::control(string option)
@@ -188,6 +150,18 @@ void MandelBrot::control(string option)
         out_ver_range.first += hor_move;
         out_ver_range.second += hor_move;
     }
+    else if(option == "maxIterUp")
+    {
+        maxIterUp();
+    }
+    else if(option == "maxIterDown")
+    {
+        maxIterDown();
+    }
+    else if(option == "reset")
+    {
+        reset();
+    }
     else
     {
         cout<<"Error\n";
@@ -203,12 +177,14 @@ sf::VertexArray MandelBrot::getArray()
 
 sf::Color MandelBrot::generateColor(unsigned int iterations, double prev_real, double prev_imaginary)
 {
+
     sf::Color color;
 
     if(iterations == max_iter)
     {
         color = sf::Color(40, 40, 40);
         //color = HSVtoRGB(200, 0.5, 0.15);
+        //sf::Color color1 = sf::Color::Black;
     }
     else
     {
@@ -216,11 +192,53 @@ sf::Color MandelBrot::generateColor(unsigned int iterations, double prev_real, d
         s = iterations + 1.0 - log(log(sqrt(prev_real*prev_real + prev_imaginary*prev_imaginary))) / log(2);
         s /= (max_iter);
         //smooth -= log(log(sqrt(prev_real*prev_real + prev_imaginary*prev_imaginary))) / log(2);
+        //s = (cos(s * M_PI + M_PI) + 1) / 2;
+        
         color = HSVtoRGB(s*360, 0.8, 0.7);
-        //color = HSVtoRGB(s*200+50, 0.5, 1.0);
     }
 
     return color;
 }
 
 
+void MandelBrot::computeMaxIter() //this must be tuned
+{
+    //iter_max depends on shorter size of window
+    if(window_size.first < window_size.second) 
+    {
+        max_iter = 1/(out_hor_range.second - out_hor_range.first) + 30;
+    }
+    else
+    {
+        max_iter = 1/(out_ver_range.second - out_ver_range.first) + 30;
+    }
+}
+
+
+void MandelBrot::maxIterUp()
+{
+    max_iter += 10;
+}
+
+void MandelBrot::maxIterDown()
+{
+    max_iter -= 10;
+}
+
+void MandelBrot::reset()
+{
+    double init_out_width = double((window_size.first*INIT_OUT_HEIGHT)/window_size.second);
+    out_ver_range.first = 1.0 * Y_COORD - 1.0 * INIT_OUT_HEIGHT/2;
+    out_ver_range.second = 1.0 * Y_COORD + 1.0 * INIT_OUT_HEIGHT/2;
+    out_hor_range.first = 1.0 * X_COORD - init_out_width/2;
+    out_hor_range.second = 1.0 * X_COORD + init_out_width/2;
+
+    max_iter = MAX_ITER;
+}
+
+
+
+void MandelBrot::setCoords(unsigned int x, unsigned int y)
+{
+
+}

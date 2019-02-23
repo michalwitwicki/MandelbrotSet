@@ -20,7 +20,7 @@
 // g Green component, range: [0, 255]
 // b Blue component, range: [0, 255]
 
-/*
+
 std::tuple<float, float, float> RGBtoHSL(const sf::Color& color)
 {
 	float R = color.r / 255.f;
@@ -126,7 +126,7 @@ sf::Color HSLtoRGB(float H, float S, float L)
 	color.b = static_cast<sf::Uint8>(std::round(B * 255));
 
 	return color;
-}*/
+}
 
 sf::Color HSVtoRGB(float H, float S, float V)
 {

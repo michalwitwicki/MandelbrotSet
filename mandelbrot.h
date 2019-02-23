@@ -14,6 +14,8 @@ public:
     void go();
     void control(string option);
     sf::VertexArray getArray();
+    void computeMaxIter();
+    void setCoords(unsigned int x, unsigned int y);
 
 private:
     pair<double, double> out_hor_range;
@@ -24,4 +26,7 @@ private:
 
     int mainEquation();
     sf::Color generateColor(unsigned int iterations, double prev_real, double prev_imaginary);
+    void maxIterUp();
+    void maxIterDown();
+    void reset();
 };

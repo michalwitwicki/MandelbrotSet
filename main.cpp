@@ -1,7 +1,7 @@
 #include "mandelbrot.h"
 
-#define WINDOW_WIDTH 700
-#define WINDOW_HEIGHT 500
+#define WINDOW_WIDTH 1000
+#define WINDOW_HEIGHT 750
 
 int main()
 {
@@ -21,6 +21,12 @@ int main()
                 case sf::Event::Closed:
                 {
                     window.close();
+                    break;
+                }
+                case sf::Event::MouseButtonPressed:
+                {
+                    //cout<<event.mouseButton.x<<endl;
+                    mandelbrot.setCoords(event.mouseButton.x, event.mouseButton.y);
                     break;
                 }
                 case sf::Event::KeyPressed:
@@ -63,6 +69,21 @@ int main()
                         mandelbrot.control("moveDown");
                         mandelbrot.go();
                     }
+                    else if(event.key.code == sf::Keyboard::U)
+                    {
+                        mandelbrot.control("maxIterUp");
+                        mandelbrot.go();
+                    }
+                    else if(event.key.code == sf::Keyboard::P)
+                    {
+                        mandelbrot.control("maxIterDown");
+                        mandelbrot.go();
+                    }
+                    else if(event.key.code == sf::Keyboard::R)
+                    {
+                        mandelbrot.control("reset");
+                        mandelbrot.go();
+                    }
                     break;
                 }
                 default:
@@ -87,3 +108,10 @@ int main()
 
     return 0;
 }
+
+
+/* TO DO:
+    - podzielic jakos madrze wszystkie rzeczy zwiazane z user inputem
+    - successive dwell limit
+    - podzielic metode go() na mniejsze czesci
+*/
