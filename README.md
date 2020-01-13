@@ -16,4 +16,5 @@ Implementation of Mandelbrot Set fractals generator / viewer.
 * http://www.stefanbion.de/fraktal-generator/colormapping/
 * https://github.com/donqustix/MandelbrotGL
 * https://github.com/realmar/mandelbrot-cpp
+* https://mathr.co.uk/
 
