@@ -1,6 +1,11 @@
-#Mandelbrot Set
+# Mandelbrot Set
+Implementation of Mandelbrot Set fractals generator / viewer.
 
-links:
+## Images:
+![img_1](https://github.com/Batawi/MandelbrotSet/img/img_1.png)
+![img_2](https://github.com/Batawi/MandelbrotSet/img/img_2.png)
+
+## Useful links:
 * http://mathworld.wolfram.com/MandelbrotSet.html
 * https://www.math.univ-toulouse.fr/~cheritat/wiki-draw/index.php/Mandelbrot_set#Escape_time_based_coloring
 * http://linas.org/art-gallery/escape/escape.html
@@ -9,4 +14,6 @@ links:
 * https://stackoverflow.com/questions/31871652/calculate-a-dynamic-iteration-value-when-zooming-into-a-mandelbrot
 * http://mrob.com/pub/muency/automaticdwelllimit.html
 * http://www.stefanbion.de/fraktal-generator/colormapping/
+* https://github.com/donqustix/MandelbrotGL
+* https://github.com/realmar/mandelbrot-cpp
 
