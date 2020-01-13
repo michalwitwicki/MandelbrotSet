@@ -2,8 +2,8 @@
 Implementation of Mandelbrot Set fractals generator / viewer.
 
 ## Images:
-![img_1](https://github.com/Batawi/MandelbrotSet/tree/master/img/img_1.png)
-![img_2](https://github.com/Batawi/MandelbrotSet/tree/master/img/img_2.png)
+![img_1](https://github.com/Batawi/MandelbrotSet/blob/master/img/img_1.png)
+![img_2](https://github.com/Batawi/MandelbrotSet/blob/master/img/img_2.png)
 
 ## Useful links:
 * http://mathworld.wolfram.com/MandelbrotSet.html
