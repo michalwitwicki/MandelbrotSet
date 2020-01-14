@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/myproject.dir/src/main.cpp.o CMakeFiles/myproject.dir/src/stopwatch.cpp.o CMakeFiles/myproject.dir/src/mandelbrot.cpp.o  -o myproject 
+/usr/bin/c++  -g   CMakeFiles/myproject.dir/src/main.cpp.o CMakeFiles/myproject.dir/src/stopwatch.cpp.o CMakeFiles/myproject.dir/src/mandelbrot.cpp.o  -o myproject  /usr/lib/libsfml-graphics.so.2.5.1 /usr/lib/libsfml-audio.so.2.5.1 /usr/lib/libsfml-window.so.2.5.1 /usr/lib/libsfml-system.so.2.5.1 
