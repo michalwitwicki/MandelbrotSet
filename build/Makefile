@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named myproject
+# Target rules for targets named MandelbrotSet
 
 # Build rule for target.
-myproject: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 myproject
-.PHONY : myproject
+MandelbrotSet: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 MandelbrotSet
+.PHONY : MandelbrotSet
 
 # fast build rule for target.
-myproject/fast:
-	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/build
-.PHONY : myproject/fast
+MandelbrotSet/fast:
+	$(MAKE) -f CMakeFiles/MandelbrotSet.dir/build.make CMakeFiles/MandelbrotSet.dir/build
+.PHONY : MandelbrotSet/fast
 
 src/main.o: src/main.cpp.o
 
@@ -129,7 +129,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/src/main.cpp.o
+	$(MAKE) -f CMakeFiles/MandelbrotSet.dir/build.make CMakeFiles/MandelbrotSet.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -138,7 +138,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/src/main.cpp.i
+	$(MAKE) -f CMakeFiles/MandelbrotSet.dir/build.make CMakeFiles/MandelbrotSet.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -147,7 +147,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/src/main.cpp.s
+	$(MAKE) -f CMakeFiles/MandelbrotSet.dir/build.make CMakeFiles/MandelbrotSet.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 src/mandelbrot.o: src/mandelbrot.cpp.o
@@ -156,7 +156,7 @@ src/mandelbrot.o: src/mandelbrot.cpp.o
 
 # target to build an object file
 src/mandelbrot.cpp.o:
-	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/src/mandelbrot.cpp.o
+	$(MAKE) -f CMakeFiles/MandelbrotSet.dir/build.make CMakeFiles/MandelbrotSet.dir/src/mandelbrot.cpp.o
 .PHONY : src/mandelbrot.cpp.o
 
 src/mandelbrot.i: src/mandelbrot.cpp.i
@@ -165,7 +165,7 @@ src/mandelbrot.i: src/mandelbrot.cpp.i
 
 # target to preprocess a source file
 src/mandelbrot.cpp.i:
-	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/src/mandelbrot.cpp.i
+	$(MAKE) -f CMakeFiles/MandelbrotSet.dir/build.make CMakeFiles/MandelbrotSet.dir/src/mandelbrot.cpp.i
 .PHONY : src/mandelbrot.cpp.i
 
 src/mandelbrot.s: src/mandelbrot.cpp.s
@@ -174,7 +174,7 @@ src/mandelbrot.s: src/mandelbrot.cpp.s
 
 # target to generate assembly for a file
 src/mandelbrot.cpp.s:
-	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/src/mandelbrot.cpp.s
+	$(MAKE) -f CMakeFiles/MandelbrotSet.dir/build.make CMakeFiles/MandelbrotSet.dir/src/mandelbrot.cpp.s
 .PHONY : src/mandelbrot.cpp.s
 
 src/stopwatch.o: src/stopwatch.cpp.o
@@ -183,7 +183,7 @@ src/stopwatch.o: src/stopwatch.cpp.o
 
 # target to build an object file
 src/stopwatch.cpp.o:
-	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/src/stopwatch.cpp.o
+	$(MAKE) -f CMakeFiles/MandelbrotSet.dir/build.make CMakeFiles/MandelbrotSet.dir/src/stopwatch.cpp.o
 .PHONY : src/stopwatch.cpp.o
 
 src/stopwatch.i: src/stopwatch.cpp.i
@@ -192,7 +192,7 @@ src/stopwatch.i: src/stopwatch.cpp.i
 
 # target to preprocess a source file
 src/stopwatch.cpp.i:
-	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/src/stopwatch.cpp.i
+	$(MAKE) -f CMakeFiles/MandelbrotSet.dir/build.make CMakeFiles/MandelbrotSet.dir/src/stopwatch.cpp.i
 .PHONY : src/stopwatch.cpp.i
 
 src/stopwatch.s: src/stopwatch.cpp.s
@@ -201,7 +201,7 @@ src/stopwatch.s: src/stopwatch.cpp.s
 
 # target to generate assembly for a file
 src/stopwatch.cpp.s:
-	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/src/stopwatch.cpp.s
+	$(MAKE) -f CMakeFiles/MandelbrotSet.dir/build.make CMakeFiles/MandelbrotSet.dir/src/stopwatch.cpp.s
 .PHONY : src/stopwatch.cpp.s
 
 # Help Target
@@ -211,7 +211,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... myproject"
+	@echo "... MandelbrotSet"
 	@echo "... edit_cache"
 	@echo "... src/main.o"
 	@echo "... src/main.i"

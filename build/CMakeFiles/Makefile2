@@ -53,7 +53,7 @@ CMAKE_BINARY_DIR = /home/batawi/Projects/MandelbrotSet/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/myproject.dir/all
+all: CMakeFiles/MandelbrotSet.dir/all
 
 .PHONY : all
 
@@ -63,36 +63,36 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/myproject.dir/clean
+clean: CMakeFiles/MandelbrotSet.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/myproject.dir
+# Target rules for target CMakeFiles/MandelbrotSet.dir
 
 # All Build rule for target.
-CMakeFiles/myproject.dir/all:
-	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/depend
-	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/batawi/Projects/MandelbrotSet/build/CMakeFiles --progress-num=1,2,3,4 "Built target myproject"
-.PHONY : CMakeFiles/myproject.dir/all
+CMakeFiles/MandelbrotSet.dir/all:
+	$(MAKE) -f CMakeFiles/MandelbrotSet.dir/build.make CMakeFiles/MandelbrotSet.dir/depend
+	$(MAKE) -f CMakeFiles/MandelbrotSet.dir/build.make CMakeFiles/MandelbrotSet.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/batawi/Projects/MandelbrotSet/build/CMakeFiles --progress-num=1,2,3,4 "Built target MandelbrotSet"
+.PHONY : CMakeFiles/MandelbrotSet.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/myproject.dir/rule: cmake_check_build_system
+CMakeFiles/MandelbrotSet.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/batawi/Projects/MandelbrotSet/build/CMakeFiles 4
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/myproject.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/MandelbrotSet.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/batawi/Projects/MandelbrotSet/build/CMakeFiles 0
-.PHONY : CMakeFiles/myproject.dir/rule
+.PHONY : CMakeFiles/MandelbrotSet.dir/rule
 
 # Convenience name for target.
-myproject: CMakeFiles/myproject.dir/rule
+MandelbrotSet: CMakeFiles/MandelbrotSet.dir/rule
 
-.PHONY : myproject
+.PHONY : MandelbrotSet
 
 # clean rule for target.
-CMakeFiles/myproject.dir/clean:
-	$(MAKE) -f CMakeFiles/myproject.dir/build.make CMakeFiles/myproject.dir/clean
-.PHONY : CMakeFiles/myproject.dir/clean
+CMakeFiles/MandelbrotSet.dir/clean:
+	$(MAKE) -f CMakeFiles/MandelbrotSet.dir/build.make CMakeFiles/MandelbrotSet.dir/clean
+.PHONY : CMakeFiles/MandelbrotSet.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

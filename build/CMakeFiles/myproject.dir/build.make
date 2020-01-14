@@ -109,6 +109,10 @@ myproject: CMakeFiles/myproject.dir/src/main.cpp.o
 myproject: CMakeFiles/myproject.dir/src/stopwatch.cpp.o
 myproject: CMakeFiles/myproject.dir/src/mandelbrot.cpp.o
 myproject: CMakeFiles/myproject.dir/build.make
+myproject: /usr/lib/libsfml-graphics.so.2.5.1
+myproject: /usr/lib/libsfml-audio.so.2.5.1
+myproject: /usr/lib/libsfml-window.so.2.5.1
+myproject: /usr/lib/libsfml-system.so.2.5.1
 myproject: CMakeFiles/myproject.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/batawi/Projects/MandelbrotSet/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable myproject"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/myproject.dir/link.txt --verbose=$(VERBOSE)
