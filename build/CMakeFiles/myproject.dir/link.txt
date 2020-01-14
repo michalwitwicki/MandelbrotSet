@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/myproject.dir/src/main.cpp.o CMakeFiles/myproject.dir/src/stopwatch.cpp.o CMakeFiles/myproject.dir/src/mandelbrot.cpp.o  -o myproject 
