@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/MandelbrotSet.dir/src/main.cpp.o CMakeFiles/MandelbrotSet.dir/src/stopwatch.cpp.o CMakeFiles/MandelbrotSet.dir/src/mandelbrot.cpp.o  -o MandelbrotSet  /usr/lib/libsfml-graphics.so.2.5.1 /usr/lib/libsfml-audio.so.2.5.1 /usr/lib/libsfml-window.so.2.5.1 /usr/lib/libsfml-system.so.2.5.1 
