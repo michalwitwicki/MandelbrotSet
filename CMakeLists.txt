@@ -16,7 +16,7 @@ find_package(SFML 2.5 COMPONENTS graphics audio window system REQUIRED)
 target_link_libraries(${APP_NAME} sfml-graphics sfml-audio sfml-window sfml-system)
 
 # Add compile warnings
-target_compile_options(${APP_NAME} PRIVATE -Wall -Wextra -pedantic -Werror)
+#target_compile_options(${APP_NAME} PRIVATE -Wall -Wextra -pedantic -Werror)
 
 
 
