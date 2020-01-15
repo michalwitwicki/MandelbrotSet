@@ -1,12 +1,11 @@
 #include "mandelbrot.h"
+#include "ui.h"
 
 #define WINDOW_WIDTH 1000
 #define WINDOW_HEIGHT 750
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "Mandelbrot Set");
-    window.setFramerateLimit(10);
 
     MandelBrot mandelbrot(window.getSize().x, window.getSize().y);
     mandelbrot.go();
