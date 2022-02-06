@@ -17,4 +17,6 @@ Implementation of Mandelbrot Set fractals generator / viewer.
 * https://github.com/donqustix/MandelbrotGL
 * https://github.com/realmar/mandelbrot-cpp
 * https://mathr.co.uk/
+* https://rosettacode.org/wiki/Mandelbrot_set
+* https://stackoverflow.com/questions/44354589/optimizing-mandelbrot-fractal
 
