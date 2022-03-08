@@ -22,4 +22,5 @@ Implementation of Mandelbrot Set fractals generator / viewer.
 * https://www.fractalus.com/kerry/articles/articles.html
 * https://github.com/lovasoa/mandelbrot
 * https://theses.liacs.nl/pdf/2018-2019-JonckheereLSde.pdf
+* https://stackoverflow.com/questions/66709289/what-are-the-fastest-algorithms-for-rendering-the-mandelbrot-set
 
